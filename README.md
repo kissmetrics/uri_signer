@@ -30,30 +30,30 @@ At any point, you can use the `reload_yard` command to view the
 documentation of the provided code. The basic usage is:
 
 ```ruby
-
-http_method = "get"
-uri         = "https://api.example.com/core/people.json?page=5&per_page=25&order=name:desc&select=id,name"
-secret      = "my_secret"
+http_method = 'get'
+uri = "https://api.example.com/v1/endpoint.json?page=2&per_page=12&order=name:desc&select=id,name"
+secret = "my_secret"
 
 signer = UriSigner::Signer.new(http_method, uri, secret)
+=> #<UriSigner::Signer:0x007fd84ebf5490 @http_method="get", @uri="https://api.example.com/v1/endpoint.json?page=2&per_page=12&order=name:desc&select=id,name", @secret="my_secret">
 
 signer.http_method
-# => "GET"
+=> "GET"
 
 signer.uri
-# => "https://api.example.com/core/people.json?page=5&per_page=25&order=name:desc&select=id,name"
+=> "https://api.example.com/v1/endpoint.json?page=2&per_page=12&order=name:desc&select=id,name"
 
 signer.signature
-# => "1AaJvChjz%2BZYJKxWsUQWNK1a%2BeGjpCs6uwQKwPw1%2FV8%3D"
+=> "Itt0xvD1ZAHHXP2ItX6PeXMfjOovr8MVgbpoXpq3158%3D"
 
 signer.uri_with_signature
-# => "https://api.example.com/core/people.json?_signature=6G4xiABih7FGvjwB1JsYXoeETtBCOdshIu93X1hltzk%3D"
+=> "https://api.example.com/v1/endpoint.json?page=2&per_page=12&order=name:desc&select=id,name&_signature=Itt0xvD1ZAHHXP2ItX6PeXMfjOovr8MVgbpoXpq3158%3D"
 
-signer.valid?("1AaJvChjz%2BZYJKxWsUQWNK1a%2BeGjpCs6uwQKwPw1%2FV8%3D")
-# => true
+signer.valid?('Itt0xvD1ZAHHXP2ItX6PeXMfjOovr8MVgbpoXpq3158%3D')
+=> true
 
-signer.valid?('1234')
-# => false
+signer.valid?('invalid')
+=> false
 ```
 
 ## Contributing
