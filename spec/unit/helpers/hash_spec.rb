@@ -1,0 +1,12 @@
+require File.expand_path(File.join(File.dirname(__FILE__), '../../../lib/uri_signer'))
+
+describe UriSigner::Helpers::Hash do
+  before(:each) do
+    @hash = { :first => 'element', 'string' => 'element' }
+    @hash.extend(UriSigner::Helpers::Hash)
+  end
+
+  it "converts all keys to strings" do
+    @hash.stringify_keys.keys.should == ["first", "string"]
+  end
+end

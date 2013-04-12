@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+yardoc "lib/uri_signer/**/*.rb" && yard server
