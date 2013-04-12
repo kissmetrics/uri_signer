@@ -6,7 +6,7 @@ module UriSigner
   #   uri         = "https://api.example.com/core/people.json?page=5&per_page=25&order=name:desc&select=id,name"
   #   secret      = "my_secret"
   #
-  #   signer = UriSigner::UriSigner.new(http_method, uri, secret)
+  #   signer = UriSigner::Signer.new(http_method, uri, secret)
   #
   #   signer.http_method
   #   # => "GET"
