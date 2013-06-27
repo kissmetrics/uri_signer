@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'activesupport', '2.3.5'
+  spec.add_dependency 'activesupport', '>= 2.3.5'
   spec.add_dependency 'rack', '1.1.6'
   spec.add_dependency 'addressable', '2.2.7'
   spec.add_dependency 'ruby-hmac', '0.4.0'
