@@ -19,9 +19,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'activesupport'
-  spec.add_dependency 'rack', '1.1.6'
-  spec.add_dependency 'addressable', '2.2.7'
-  spec.add_dependency 'ruby-hmac', '0.4.0'
+  spec.add_dependency 'rack'
+  spec.add_dependency 'addressable'
+  spec.add_dependency 'ruby-hmac'
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
