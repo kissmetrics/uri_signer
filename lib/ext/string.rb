@@ -1,5 +1,3 @@
 class String
-  def blank?
-    nil? || empty?
-  end
+  alias_method :blank?, :empty?
 end

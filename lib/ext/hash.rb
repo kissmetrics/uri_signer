@@ -1,5 +1,3 @@
 class Hash
-  def blank?
-    nil? || empty?
-  end
+  alias_method :blank?, :empty?
 end
