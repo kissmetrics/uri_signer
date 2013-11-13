@@ -7,6 +7,6 @@ describe UriSigner::Helpers::Hash do
   end
 
   it "converts all keys to strings" do
-    @hash.stringify_keys.keys.should == ["first", "string"]
+    expect(@hash.stringify_keys.keys).to include("first", "string")
   end
 end
