@@ -1,4 +1,4 @@
-class Rack
+module Rack
   module Utils
     DEFAULT_SEP = /[&;] */n
 
