@@ -1,14 +1,21 @@
 # UriSigner
 
+  - [![Version](https://badge.fury.io/rb/uri_signer.png)](https://rubygems.org/gems/uri_signer)
+  - [![Climate](https://codeclimate.com/github/kissmetrics/uri_signer.png)](https://codeclimate.com/github/kissmetrics/uri_signer)
+  - [![Build](http://img.shields.io/travis-ci/kissmetrics/uri_signer.png)](https://travis-ci.org/kissmetrics/uri_signer)
+  - [![Dependencies](https://gemnasium.com/kissmetrics/uri_signer.png)](https://gemnasium.com/kissmetrics/uri_signer)
+  - [![Coverage](http://img.shields.io/coveralls/kissmetrics/uri_signer.png)](https://coveralls.io/r/kissmetrics/uri_signer)
+  - [![License](http://img.shields.io/license/MIT.png?color=green)](http://opensource.org/licenses/MIT)
+
 The KISSmetrics API provides an authentication realm of a digital
 signature of the request. This gem helps to put the pieces together and
 construct the URL with the signature.
 
 This is used within the core KISSmetrics Ruby API Wrapper to help
-abstract the building of the requests. 
+abstract the building of the requests.
 
 Using this without a wrapper will require you to manually provide your
-*client_secret*. 
+*client_secret*.
 
 ## Installation
 
