@@ -1,26 +1,26 @@
-root = File.expand_path(File.dirname(__FILE__))
-
-# Utilities
-require 'rack/utils'
-require 'active_support/core_ext/object/blank.rb'
-
-# Version
-require File.join(root, 'uri_signer', 'version')
-
-# Errors
-require File.join(root, 'uri_signer', 'errors')
-
-# Core Extension Helpers
-require File.join(root, 'uri_signer', 'helpers')
-require File.join(root, 'uri_signer', 'helpers', 'string')
-require File.join(root, 'uri_signer', 'helpers', 'hash')
-
-# Parsers and Signers
-require File.join(root, 'uri_signer', 'query_hash_parser')
-require File.join(root, 'uri_signer', 'request_parser')
-require File.join(root, 'uri_signer', 'request_signature')
-require File.join(root, 'uri_signer', 'uri_signature')
-require File.join(root, 'uri_signer', 'signer')
+require 'uri'
+require 'cgi'
+require 'base64'
+require 'hmac'
+require 'hmac-sha2'
+require 'addressable/uri'
 
 module UriSigner
+
 end
+
+require "ext/hash"
+require "ext/string"
+require "ext/nil"
+require "ext/symbol"
+require "ext/rack/utils"
+require "uri_signer/version"
+require "uri_signer/errors"
+require "uri_signer/helpers"
+require "uri_signer/helpers/string"
+require "uri_signer/helpers/hash"
+require "uri_signer/query_hash_parser"
+require "uri_signer/request_parser"
+require "uri_signer/request_signature"
+require "uri_signer/uri_signature"
+require "uri_signer/signer"

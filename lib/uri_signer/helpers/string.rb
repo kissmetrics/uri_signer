@@ -1,11 +1,3 @@
-require 'uri'
-require 'cgi'
-require 'rack/utils'
-require 'base64'
-require 'hmac'
-require 'hmac-sha2'
-require 'addressable/uri'
-
 module UriSigner
   module Helpers
     module String

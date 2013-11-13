@@ -18,14 +18,11 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'activesupport'
-  spec.add_dependency 'rack'
-  spec.add_dependency 'addressable'
-  spec.add_dependency 'ruby-hmac'
+  spec.add_dependency 'addressable', '~> 2.2'
+  spec.add_dependency 'ruby-hmac', '~> 0.4'
 
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'yard'
-  spec.add_development_dependency 'redcarpet'
 end
