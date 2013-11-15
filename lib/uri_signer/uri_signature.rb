@@ -71,9 +71,8 @@ module UriSigner
     def sign!
       extension = UriSigner::Helpers::String
 
-      hmac    = self.signature_string.extend(extension).hmac_signed_with(@secret)
-      encoded = hmac.extend(extension).base64_encoded
-      escaped = encoded.extend(extension).escaped
+      hmac = self.signature_string.extend(extension).hmac_signed_with(@secret)
+      hmac.extend(extension).base64_encoded
     end
   end
 end

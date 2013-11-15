@@ -56,7 +56,8 @@ module UriSigner
     # return [String]
     def uri_with_signature
       separator = if request_parser.query_params? then '&' else '?' end
-      "%s%s_signature=%s" % [self.uri, separator, self.signature]
+      encoded_signature = signature.extend(UriSigner::Helpers::String).escaped
+      "%s%s_signature=%s" % [self.uri, separator, encoded_signature]
     end
 
     # Returns the uppercased HTTP Method

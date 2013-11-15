@@ -38,7 +38,7 @@ describe UriSigner::Signer do
   end
 
   it "returns the signed URI with the secret" do
-    subject.signature.should == "1AaJvChjz%2BZYJKxWsUQWNK1a%2BeGjpCs6uwQKwPw1%2FV8%3D"
+    subject.signature.should == "1AaJvChjz+ZYJKxWsUQWNK1a+eGjpCs6uwQKwPw1/V8="
   end
 
   context "appending the signature" do
@@ -55,7 +55,7 @@ describe UriSigner::Signer do
 
   context "Validating the signature" do
     it "returns true for #valid?" do
-      subject.valid?('1AaJvChjz%2BZYJKxWsUQWNK1a%2BeGjpCs6uwQKwPw1%2FV8%3D').should be_true
+      subject.valid?('1AaJvChjz+ZYJKxWsUQWNK1a+eGjpCs6uwQKwPw1/V8=').should be_true
     end
 
     it "returns false for #valid?" do
