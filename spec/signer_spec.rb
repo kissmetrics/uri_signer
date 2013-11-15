@@ -43,13 +43,13 @@ describe UriSigner::Signer do
 
   context "appending the signature" do
     it "appends the _signature on to the URI" do
-      subject.uri_with_signature.should == "https://api.example.com/core/people.json?page=5&per_page=25&order=name:desc&select=id,name&_signature=1AaJvChjz+ZYJKxWsUQWNK1a+eGjpCs6uwQKwPw1/V8="
+      subject.uri_with_signature.should == "https://api.example.com/core/people.json?page=5&per_page=25&order=name:desc&select=id,name&_signature=1AaJvChjz%2BZYJKxWsUQWNK1a%2BeGjpCs6uwQKwPw1%2FV8%3D"
     end
 
     it "appends the _signature when there are no query string params" do
       uri = "https://api.example.com/core/people.json"
       signer = described_class.new(@http_method, uri, @secret)
-      signer.uri_with_signature.should == "https://api.example.com/core/people.json?_signature=6G4xiABih7FGvjwB1JsYXoeETtBCOdshIu93X1hltzk="
+      signer.uri_with_signature.should == "https://api.example.com/core/people.json?_signature=6G4xiABih7FGvjwB1JsYXoeETtBCOdshIu93X1hltzk%3D"
     end
   end
 
