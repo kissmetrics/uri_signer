@@ -18,7 +18,7 @@ describe UriSigner::UriSignature do
 
   it "signs the request" do
     # NOTE: Want to somehow refactor this when looking into the players of signing (String Helpers)
-    subject.signature.should == "KwLgbFRjaoQ8IBQs3xje6uhgyoT6gQR04YQs36lAXmk%3D"
+    subject.signature.should == "KwLgbFRjaoQ8IBQs3xje6uhgyoT6gQR04YQs36lAXmk="
   end
 
   context "Validations" do
